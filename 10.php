@@ -23,7 +23,7 @@
     $dpk = $_POST["dpk"];
 
   
-    $rataRata = round($pabp + $mtk + $dpk) / 3;
+    $rataRata = ($pabp + $mtk + $dpk) / 3;
 
     
     if ($rataRata >= 80 && $rataRata <= 100) {
@@ -37,11 +37,11 @@
     } elseif ($rataRata >= 0 && $rataRata < 45) {
         $grade = 'E';
     } else {
-        $grade = 'K';
+        $grade = 'Angka tidak memenuhi persyaratan';
     }
 
         echo "<h3>Hasil Perhitungan:</h3>";
-        echo "Rata-rata nilai: $rataRata<br>";
+        echo "Rata-rata nilai:" . round($rataRata) . "<br>";
         echo "Grade: $grade";
     }
     ?>
