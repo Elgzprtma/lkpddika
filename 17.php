@@ -20,7 +20,7 @@ if (isset($_POST['submit'])){
     $numbers = [];
     for ($i = 1; $i <= 20; $i++) {
         if (isset($_POST["number$i"])) {
-            $number = floatval($_POST["number$i"]);
+            $number = $_POST["number$i"];
             array_push($numbers, $number);
         }   
     }
