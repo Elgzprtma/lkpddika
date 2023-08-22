@@ -22,7 +22,7 @@ if (isset($_POST['submit'])){
         if (isset($_POST["number$i"])) {
             $number = floatval($_POST["number$i"]);
             array_push($numbers, $number);
-        }
+        }   
     }
 
     if (!empty($numbers)) {
